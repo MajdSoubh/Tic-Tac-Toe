@@ -1,0 +1,143 @@
+.impossible-word {
+  margin-bottom: 0rem;
+}
+h1 {
+  font-size: 48px;
+  margin-top: 0.3rem;
+  margin-bottom: 50px;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.menu.show {
+  display: flex;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option {
+  margin: 0 20px;
+}
+
+label {
+  cursor: pointer;
+}
+
+.player-shape {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+.player-shape:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.x {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.o {
+  background-color: #2196f3;
+  color: #fff;
+}
+.result {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.board {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.board.show {
+  display: flex;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+.x-icon,
+.o-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  width: 100%;
+  color: white;
+  height: 100%;
+}
+.x-icon {
+  background-color: #ff5722;
+}
+.o-icon {
+  background-color: #2196f3;
+}
+.x-icon:before {
+  content: "X";
+
+  animation: icon-anim 5s ease-in-out infinite;
+}
+
+.o-icon:before {
+  content: "O";
+  animation: icon-anim 5s ease-in-out infinite;
+}
+
+@keyframes icon-anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

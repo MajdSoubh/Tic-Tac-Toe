@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="menu show" id="menu">
+      <div>
+        <span class="impossible-word">Impossible</span>
+        <h1>Tic Tac Toe</h1>
+      </div>
+      <div class="options">
+        <div class="option">
+          <label for="player-x">
+            <div onclick="start('x','o')" data-shape="x" class="player-shape x">
+              X
+            </div>
+          </label>
+        </div>
+        <div class="option">
+          <label for="player-o">
+            <div onclick="start('o','x')" data-shape="o" class="player-shape o">
+              O
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="result" id="result"></div>
+    </div>
+
+    <div id="board" class="board">
+      <div class="row">
+        <div class="cell" data-cell-id="0"></div>
+        <div class="cell" data-cell-id="1"></div>
+        <div class="cell" data-cell-id="2"></div>
+      </div>
+      <div class="row">
+        <div class="cell" data-cell-id="3"></div>
+        <div class="cell" data-cell-id="4"></div>
+        <div class="cell" data-cell-id="5"></div>
+      </div>
+      <div class="row">
+        <div class="cell" data-cell-id="6"></div>
+        <div class="cell" data-cell-id="7"></div>
+        <div class="cell" data-cell-id="8"></div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
